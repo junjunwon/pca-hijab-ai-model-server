@@ -36,7 +36,7 @@ def analyze_image():
         try:
             # 이미지 객체를 분석하는 로직
             resultTone = personal_color.analysis(opencv_image)
-            return jsonify({"tone": resultTone}), 200
+            return jsonify({"result": resultTone}), 200
         except Exception as e:
             return jsonify({"error": str(e)}), 500
     else:
